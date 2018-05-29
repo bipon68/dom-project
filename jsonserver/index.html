@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="output">
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.js"></script>
+    <script>
+        var data = [];
+
+        for(var i=10; i<10; i++){
+            var obj = {};
+            obj.id = i+1;
+            obj.name = faker.name.findName();
+            obj.email = faker.internet.email();
+
+            data.push(obj)
+        }
+
+        document.getElementById('output').innerHTML = JSON.stringify(data)
+    </script>
+    
+</body>
+</html>
